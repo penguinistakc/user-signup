@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+ {% block style %}
+<style type="text/css">
+    .error {
+        color: red;
+    }
+</style>
+{% endblock %} 
+
+{% block content %}
+<form action="/signup" method="post">
+    <fieldset name="user-signup">
+        <legend><h1>User Signup</h1></legend>
+        <table>
+            <tr>
+                <td><label for="username">Username:</label></td>
+                <td><input name="username" id="username" type="text" value="{{ username }}" />
+                <span class="error">{{ username_error }}</span></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input name="password" id="password" type="password" />
+                <span class="error">{{ password_error }}</span></td>
+            </tr>
+            <tr>
+                <td><label for="verifyPassword">Verify Password:</label></td>
+                <td><input name="verifyPassword" id="verifyPassword" type="password" />  
+                <span class="error">{{ verify_error }}</span></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email (optional):</label></td>
+                <td><input name="email" id="email" type="text" value="{{ email }}"/>
+                <span class="error">{{ email_error }}</span></td>
+            </tr>
+        </table>
+    </fieldset>
+    <br />
+    <input type="submit" value="Create Account" />
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>{{title}}</title>
+        <meta name="author" content="Matthew G. Copple" />
+        <meta name="description" content="flask base html template" />
+        {% block style %}
+        {% endblock %}
+    </head>
+    <body>
+
+        <!-- define a block for child template -->
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>
